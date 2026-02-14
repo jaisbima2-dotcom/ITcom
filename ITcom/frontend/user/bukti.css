@@ -1,0 +1,84 @@
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fff; /* Latar putih sesuai gambar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        /* ================= STYLE TABEL BUKTI ================= */
+        .table-bukti {
+            width: 100%;
+            border-collapse: collapse; /* Agar garis tabel menyatu */
+            margin-bottom: 40px;
+        }
+
+        .table-bukti td {
+            border: 1px solid #000; /* Garis hitam tegas sesuai gambar */
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        /* Kolom Kiri (Label) */
+        .table-bukti td:first-child {
+            width: 30%;
+            text-align: center;
+            color: #000;
+        }
+
+        /* Kolom Kanan (Isi) */
+        .table-bukti td:last-child {
+            width: 70%;
+            text-align: left;
+            background-color: #fff;
+        }
+
+        /* ================= STYLE TOMBOL CETAK ================= */
+        .btn-cetak {
+            background-color: #d93025; /* Merah sesuai gambar */
+            color: white;
+            border: 1px solid #000;
+            padding: 8px 25px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn-cetak:hover {
+            background-color: #b3261e;
+        }
+
+        /* Sembunyikan tombol saat diprint */
+        @media print {
+            .btn-cetak {
+                display: none;
+            }
+            body {
+                padding: 0;
+            }
+        }
